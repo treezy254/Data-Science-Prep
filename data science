@@ -1,0 +1,122 @@
+your dataset had too many variables
+
+Dot notation, which we use to select the "Prediction target"
+
+Selecting with a column list, which we use to select the featres
+
+Define: what type sof model it will be
+Fit: Capture patterns from provided data.
+Predict: Just what it sounds like
+Evaluate: Determine how accrate the model predictions are
+
+----
+
+You've built a model, how good is it?
+Mean Absolute Error
+	- On average, our predictions are off by...
+	error = actual - predicted
+
+	sklearn.metrics
+
+train_test_split
+	sklearn.mode_selection
+
+
+----
+
+overfitting: - whereby a model matches the training data almost perfectly, but does poorly in validation and other new data.
+
+underfitting: - model fails to capture important distinctions and patterns in the data
+
+After knowing the best tree size, now you can make the model more accurate by using all of the data and keeping the tree size.
+
+
+----
+
+Random Forests
+--
+
+sklearn.ensemble import RandomForestRegressor
+
+----
+- create a fully-connected neural network architecture
+- apply neural nets to two classic ML problems: regression and classification
+- train neural nets with stochastic gradient descent 
+- improve performance with dropout, batch normalization, and other techniques
+
+The linear unit :: y = wx + b
+
+X :- the input
+w :- the weight of the neuron
+b :- a special kind of weight called the bias
+
+multiple inputs:: y = w0x0 + w1x1 + w2x2 + b
+
+units = output
+input_shape = inputs
+
+
+---
+modullarity:- building up a complex network from simpler fumctional units 
+
+Activation function: some function we apply to each pf a layer's outputs 
+
+Rectifier function: m(0, x)
+Rectified linear unit: m(0, w * x + b)
+
+-----
+
+Stochastic Gradient Descent
+---
+
+loss function: measures how good the network's predictions are
+	- mean squared error
+	- Huber loss
+
+Optimizer: That can tell the network how to change its weights
+	-  stochastic gradient descent: iterative algorithms that train a network in steps
+
+	: Sample some training data and run it through the network to make predictions
+	: Measure the loss between the predictions and the true values
+	: Finally, adjust the wights in a direction that makes the loss smaller
+
+
+minibatch : Each iteration's sample of training data
+epoch: complete round of the training data 
+
+Adam: an SGD algorithm that has an adaptive learning rate that makes it suitable for most problems without any parameter tuning.
+
+----
+
+signal: The part that can help our model make predictions from new data
+
+Noise: all the random fluctuation  that comes from data in the real-world.
+
+Underfitting: When the loss is not as low as it could be because the model hasn't learned enough signal
+
+Overfitting: When the loss is not as low as it cold be because the model learned too much noise.
+
+Capacity :- refers to the size and complexity of the patterns it is able to learn.
+
+Wider netweoks have an easier time learning more linear relationships, while deeper networks prefer more nonlinear ones.
+
+early stopping: Interrupting the training whenever the validation loss isn't decreasing anymore
+
+callback :- a function you want to run every so oftem while the network trains
+
+----
+
+Binary classification
+
+Accuracy: the ratio of correct predictions to total predictions.
+
+cross-entropy function: a sort of measure for the distance from one probability distribution to another.
+
+sigmoid function
+
+threshold probability
+
+
+
+
+
